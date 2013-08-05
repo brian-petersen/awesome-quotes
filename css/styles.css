@@ -1,5 +1,10 @@
 body {
     padding-top: 60px;
+    background: #fff url('../img/background.png') repeat;
+}
+
+.welcome-banner {
+    background-color: #f5f5f5;
 }
 
 .sidebar-nav {
