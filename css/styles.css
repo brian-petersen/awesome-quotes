@@ -10,6 +10,16 @@ body {
     clear: both;
 }
 
+.input-70 {
+    width: 70%;
+}
+
+.author-search-container {
+    margin-bottom: 0;
+    margin-left: 10px;
+    margin-bottom: 5px;
+}
+
 .author-list {
     margin-right: 5px;
     max-height: 500px;

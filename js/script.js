@@ -22,17 +22,26 @@ $(document).ready(function() {
         );
     });
 
-    $('.search-query').on('input', function() {
+    $('.quote-search').on('input', function() {
         var query = $(this).val();
 
         $('.author-link').removeClass('active');
 
-        $(".quote:not(:contains('" + query + "'))").fadeOut();
-        $(".quote:hidden:contains('" + query + "')").fadeIn();
+        $(".quote:not(:contains('" + query + "'))").slideUp();
+        $(".quote:hidden:contains('" + query + "')").slideDown();
+    });
+
+    $('.author-list-search').on('input', function() {
+        var query = $(this).val();
+
+        // $('.author-link').removeClass('active');
+
+        $(".author-link a:not(:contains('" + query + "'))").parent().slideUp();
+        $(".author-link a:hidden:contains('" + query + "')").parent().slideDown();
     });
 
     $('.author-link').live('click', function() {
-        $('.search-query').val('');
+        $('.quote-search').val('');
 
         $('.author-link').removeClass('active');
         $(this).addClass('active');
@@ -42,7 +51,7 @@ $(document).ready(function() {
     });
 
     $('.reset').click(function() {
-        $('.author-link').removeClass('active');
+        $('.author-link').show().removeClass('active');
         $('.quote').show();
         $('.search-query').val('');
     });
